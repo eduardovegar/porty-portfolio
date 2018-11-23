@@ -8,9 +8,9 @@ namespace porty_portofolio.Controllers
 {
   public class PortfolioController : Controller
   {
-    public IActionResult Portfolio()
+    public IActionResult Index()
     {
-
+      return View();
     }
 
   }
