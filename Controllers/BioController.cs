@@ -10,7 +10,7 @@ namespace porty_portofolio.Controllers
   {
     public IActionResult Bio()
     {
-
+      return View();
     }
   }
 }
