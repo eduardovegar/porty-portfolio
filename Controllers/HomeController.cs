@@ -17,7 +17,9 @@ namespace porty_portofolio.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "buenas vendo panes";
+            ViewData["customer_name"] = "jaime";
+            ViewData["customer_age"] = 15; 
 
             return View();
         }
