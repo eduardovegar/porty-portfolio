@@ -10,6 +10,13 @@
       </div>
     </div>
     <div class="col">
+    @foreach (var item in Model.Items) {
+
+      <div class="portfolio-item">
+        <h2>@item.Title</h2>
+        <p>@item.Description</p>
+      </div>
+    }
     </div<
   </div>
 </div>
