@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using porty.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using porty.Services;
 
 namespace porty
 {
@@ -41,6 +42,9 @@ namespace porty
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // add fake stuff implementation
+            services.AddSingleton<IPortfolioItemService, FakePortfolioItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
