@@ -12550,11 +12550,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/earth/Drive/Documents/FDU/F18/INFO 4844/porty-portofolio/porty/porty.csproj",
+      "projectUniqueName": "/home/earth/Drive/Documents/FDU/F18/INFO 4844/porty-portofolio/porty.csproj",
       "projectName": "porty",
-      "projectPath": "/home/earth/Drive/Documents/FDU/F18/INFO 4844/porty-portofolio/porty/porty.csproj",
+      "projectPath": "/home/earth/Drive/Documents/FDU/F18/INFO 4844/porty-portofolio/porty.csproj",
       "packagesPath": "/home/earth/.nuget/packages/",
-      "outputPath": "/home/earth/Drive/Documents/FDU/F18/INFO 4844/porty-portofolio/porty/obj/",
+      "outputPath": "/home/earth/Drive/Documents/FDU/F18/INFO 4844/porty-portofolio/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
