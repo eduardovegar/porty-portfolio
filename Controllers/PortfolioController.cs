@@ -8,6 +8,8 @@ namespace porty.Controllers
 {
   public class PortfolioController : Controller
   {
-     // actions
+     public IActionResult Index(){
+       // do stuff here
+     }
   }
 }
