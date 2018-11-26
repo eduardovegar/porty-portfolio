@@ -11,7 +11,9 @@ namespace porty.Models
     public string Title { get; set; }
     // item description or metadata
     public string Description { get; set; }
+    // item url string
     public string ImageUrl { get; set; }
-    
+    // date published/uploaded
+    public DateTimeOffset? PublishedAt { get; set; }
   }
 }
