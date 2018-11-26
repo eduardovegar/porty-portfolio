@@ -11,15 +11,15 @@ namespace porty.Services
     {
       var item1 = new PortfolioItem
       {
-        Title = "aqui dibuje algo bien vergas",
-        Description = "pos no se me dio el fua y ya",
+        Title = "Portfolio Item N. 1",
+        Description = "Lorem ipsum ad dolorem",
         PublishedAt = DateTimeOffset.Now,
         ImageUrl = "https://i.imgur.com/GUELwGu.png"
       };
       var item2 = new PortfolioItem
       {
-        Title = "aqui NO dibuje algo bien paloma",
-        Description = "ola k ase leer esta onda o k ase",
+        Title = "Portfolio Item N. 2",
+        Description = "this is another lorem ipsum dalar for",
         PublishedAt = DateTimeOffset.Now,
         ImageUrl = "https://i.imgur.com/GUELwGu.png"
       };
