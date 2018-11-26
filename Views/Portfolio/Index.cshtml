@@ -1,0 +1,15 @@
+@model PortfolioViewModel
+
+@ {
+  ViewData["Title"] = "See your portfolio items";
+}
+
+<div class="container">
+  @foreach (var item in Model.Items)
+  {
+    <div class="portfolio-item">
+      <h1 class="portfolio-title">@item.Title</h1>
+      <p class="portfolio-description">@item.Description</p>
+    </div>
+  }
+</div>
