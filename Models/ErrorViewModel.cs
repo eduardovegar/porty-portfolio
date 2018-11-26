@@ -1,6 +1,6 @@
 using System;
 
-namespace porty_portofolio.Models
+namespace porty.Models
 {
     public class ErrorViewModel
     {
