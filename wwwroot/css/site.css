@@ -72,10 +72,14 @@ img.img-responsive {
     height: auto;
 }
 h1 {
-font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-family: Helvetica,Arial,sans-serif;
 font-size:40px
 }
 h2{
 font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:20px
+}
+
+.bio-container {
+  background-color: #f8f8f8;
 }
