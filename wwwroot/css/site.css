@@ -64,7 +64,7 @@ img-responsive.ImageUrl {
 }
 /* custom stuff */
 .item img[src$=".svg"]{
-  width:60%
+  max-width:250px
   }
   #qrCode{margin:15px}@media screen and (max-width:767px){.carousel-caption{display:none}}
 img.img-responsive {
