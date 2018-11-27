@@ -42,7 +42,9 @@ font-size:40px
     padding-left: 15px;
     padding-right: 15px;
 }
-
+.row {
+  background-color: #f8f8f8;
+}
 
 /* Carousel */
 .carousel-caption p {
