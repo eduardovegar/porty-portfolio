@@ -73,3 +73,31 @@ container-fluid {
 
     }
 }
+/* custom stuff */
+.item img[src$=".svg"]{
+  width:60%
+  }
+  #qrCode{margin:15px}@media screen and (max-width:767px){.carousel-caption{display:none}}
+img.img-responsive {
+    width:  300px ;
+    height: auto;
+}
+.h1 {
+font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:40px
+}
+.h2{
+font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:20px
+}
+
+container {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.item {
+  display:inline-block;
+
+}
