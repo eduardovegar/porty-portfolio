@@ -23,7 +23,7 @@ img.img-responsive {
     background-size:     cover;
 }
 
-.img {
+img-responsive.ImageUrl {
     display: inline-block;
     max-width: 60%;
     height: auto;
