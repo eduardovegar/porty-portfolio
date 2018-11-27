@@ -21,6 +21,16 @@ img-responsive {
     background-repeat:   no-repeat;
     background-size:     cover;
 }
+.portfolio-item-img {
+  position: relative;
+  float: left;
+  width:  400px;
+  height: 400px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
 .h1 {
 font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:40px
