@@ -11,17 +11,17 @@ namespace porty.Services
     {
       var item1 = new PortfolioItem
       {
-        Title = "Portfolio Item N. 1",
-        Description = "Lorem ipsum ad dolorem",
+        Title = "Rebbon - Clothes for a Cause",
+        Description = "Poster for the campaign: Clothes for a cause",
         PublishedAt = DateTimeOffset.Now,
-        ImageUrl = "https://i.imgur.com/GUELwGu.png"
+        ImageUrl = "http://54.71.87.202/wp-content/uploads/2018/10/rebbonposter.jpg"
       };
       var item2 = new PortfolioItem
       {
-        Title = "Portfolio Item N. 2",
-        Description = "this is another lorem ipsum dalar for",
+        Title = "JP",
+        Description = "tried to draw my boyfriend as a caricature. I think it came out really good. Not sure if he thinks the same…",
         PublishedAt = DateTimeOffset.Now,
-        ImageUrl = "https://i.imgur.com/GUELwGu.png"
+        ImageUrl = "http://54.71.87.202/wp-content/uploads/2018/10/image.png"
       };
 
       return Task.FromResult(new[] {item1, item2}); // returns task array from created items
