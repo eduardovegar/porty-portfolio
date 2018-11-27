@@ -12,7 +12,7 @@ container {
    max-width: 500px
 }
 
-.img-responsive {
+img.img-responsive {
     position: relative;
     width:  400px;
     max-width:50%;
@@ -21,6 +21,12 @@ container {
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
+}
+
+.img {
+    display: inline-block;
+    max-width: 60%;
+    height: auto;
 }
 
 
@@ -58,5 +64,6 @@ font-size:40px
     /* Hide captions */
     .carousel-caption {
         display: none;
+
     }
 }
