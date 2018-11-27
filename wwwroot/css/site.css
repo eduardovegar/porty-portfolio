@@ -5,6 +5,16 @@ body {
     padding-bottom: 20px;
 }
 
+.img {
+    position: relative;
+    float: left;
+    width:  400px;
+    height: 400px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -34,13 +44,4 @@ body {
     .carousel-caption {
         display: none;
     }
-}
-
-.img {
-    float: left;
-    width:  400px;
-    height: 400px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
 }
