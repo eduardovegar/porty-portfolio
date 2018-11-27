@@ -18,6 +18,9 @@ img-responsive {
     background-repeat:   no-repeat;
     background-size:     cover;
 }
+.h1 {
+font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
