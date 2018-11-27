@@ -30,6 +30,7 @@ img-responsive.ImageUrl {
 }
 
 
+
 .h1 {
 font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:40px
@@ -51,7 +52,7 @@ font-size:40px
 
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+    width: 60%;
 }
 
 /* QR code generator */
