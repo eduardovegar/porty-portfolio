@@ -11,6 +11,7 @@ namespace porty.Services
     {
       var item1 = new PortfolioItem
       {
+        Id = Guid.NewGuid(),
         Title = "Rebbon - Clothes for a Cause",
         Description = "Poster for the campaign: Clothes for a cause",
         PublishedAt = DateTimeOffset.Now,
@@ -18,6 +19,7 @@ namespace porty.Services
       };
       var item2 = new PortfolioItem
       {
+        Id = Guid.NewGuid(),
         Title = "JP",
         Description = "tried to draw my boyfriend as a caricature. I think it came out really good. Not sure if he thinks the same…",
         PublishedAt = DateTimeOffset.Now,
@@ -26,6 +28,7 @@ namespace porty.Services
 
       var item3 = new PortfolioItem
       {
+        Id = Guid.NewGuid(),
         Title = "Model United Nations Club Logo",
         Description = "Designed the FDU MUN Club Logo from scratch, using key elements such as the UN globe to represent union, the olive branches that represent peace, and the use of Playfair Display as a font for a touch of modernism and seriousness",
         PublishedAt = DateTimeOffset.Now,
@@ -33,6 +36,7 @@ namespace porty.Services
       };
       var item4 = new PortfolioItem
       {
+        Id = Guid.NewGuid(),
         Title = "Finch's Tea and Coffee House",
         Description = "Designed and deployed the website for Finch's, a local tea shop in Vancouver",
         PublishedAt = DateTimeOffset.Now,
@@ -40,6 +44,7 @@ namespace porty.Services
       };
       var item5 = new PortfolioItem
       {
+        Id = Guid.NewGuid(),
         Title = "ROBUSTA - A Minimal Coffee Magazine",
         Description = "As part of a class project, designed, constructed and published (printed, as well) a concept magazine called ROBUSTA.",
         PublishedAt = DateTimeOffset.Now,
