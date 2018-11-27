@@ -2,10 +2,14 @@ body{padding-top:50px;padding-bottom:20px}.body-content{padding-left:15px;paddin
 img.img-responsive {
     position: relative;
     width:  400px;
-    max-width:50%;
     height: 400px;
     display:inline-block;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+}
+.h1 {
+font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:40px
+}
+
+container {
+  display: inline-block;
 }
