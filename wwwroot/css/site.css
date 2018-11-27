@@ -30,23 +30,12 @@ img-responsive.ImageUrl {
 }
 
 
-
-.h1 {
-font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size:40px
-}
-
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
-container-fluid {
-  background-color: #f8f8f8;
-  box-shadow: 10px 5px 5px gray;
-}
-
 
 
 /* Carousel */
@@ -89,8 +78,4 @@ font-size:40px
 h2{
 font-family: "acumin-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:20px
-}
-
-
-
 }
