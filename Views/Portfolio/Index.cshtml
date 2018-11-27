@@ -28,7 +28,7 @@
     @foreach (var item in Model.Items)
     {
       <div class="portfolio-item col-md-6">
-        <img class="img-responsive" src="@item.ImageUrl" />
+        <img clas="img-responsive portfolio-item-img">
 
         <h3 class="portfolio-title">@item.Title</h3>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@item.Id">
