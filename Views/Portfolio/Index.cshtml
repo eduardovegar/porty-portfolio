@@ -7,8 +7,8 @@
 <div class="container-fluid">
   <div class="row">
     <!--TODO: Implement Bio from database -->
-    <div class="col-md-2"> <div class= "bio-container">
-      <img class="img-responsive portfolio-bio-pic" />
+    <div class="col-md-2">
+      <img class="img-responsive portfolio-item-img" />
       <h2 class="bio-title">Eduardo Vega</h2>
       <p class="bio-tagline">Freelance Designer / Web Developer</p>
       <p class="bio-location">Vancouver, BC</p>
@@ -19,7 +19,7 @@
           <li>Twitter</li>
         </ul>
         </div>
-      </div>
+
     </div>
 
   <div class="col-md-10">
@@ -28,6 +28,7 @@
     {
       <div class="portfolio-item col-md-6">
         <img class="img-responsive" src="@item.ImageUrl" />
+        < class= "bio-container">
         <h3 class="portfolio-title">@item.Title</h3>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@item.Id">
           More Info
@@ -46,6 +47,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
+              </div>
               </div>
             </div>
           </div>
