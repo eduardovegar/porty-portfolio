@@ -5,11 +5,11 @@ body {
     padding-bottom: 20px;
 }
 
-div.container {
+container {
   display: inline-block;
 }
 
-.img-responsive {
+img-responsive {
     position: relative;
     float: left;
     width:  400px;
