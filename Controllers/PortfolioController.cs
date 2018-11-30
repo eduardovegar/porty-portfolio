@@ -16,8 +16,8 @@ namespace porty.Controllers
     {
       _portfolioItemService = portfolioItemService;
     }
-     public async Task<IActionResult> Index()
-     {
+    public async Task<IActionResult> Index()
+    {
       var items = await _portfolioItemService.GetIncompleteItemsAsync();
 
       var model = new PortfolioViewModel()
@@ -25,21 +25,21 @@ namespace porty.Controllers
         Items = items // declare global Items as internal items
       };
       return View(model);
-     }
-     [ValidateAntiForgeryTokenAttribute]
-     public async Task<IActionResult> AddItem(PortfolioItem newItem)
-     {
-       if (!ModelState.IsValid)
-       {
-         return RedirectToAction("Index");
-       }
-       var successful = await _portfolioItemService.AddItemAsync(newItem);
+    }
+    [ValidateAntiForgeryTokenAttribute]
+    public async Task<IActionResult> AddItem(PortfolioItem newItem)
+    {
+      if (!ModelState.IsValid)
+      {
+        return RedirectToAction("Index");
+      }
+      var successful = await _portfolioItemService.AddItemAsync(newItem);
 
-       if (!successful)
-       {
-         return BadRequest("Could not add Item");
-       }
-       return RedirectToAction("Index");
-     }
-   }
+      if (!successful)
+      {
+        return BadRequest("Could not add Item");
+      }
+      return RedirectToAction("Index");
+    }
   }
+}
