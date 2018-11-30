@@ -33,5 +33,10 @@ container {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .bio-container {
-  background: #fff;
+  background: #f9f;
+}
+
+div.container-pitems {
+  background-color: #fff;
+  padding: 10px 15px;
 }
