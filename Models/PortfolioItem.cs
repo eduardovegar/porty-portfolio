@@ -15,5 +15,7 @@ namespace porty.Models
     public string ImageUrl { get; set; }
     // date published/uploaded
     public DateTimeOffset? PublishedAt { get; set; }
+    // show portfolio as public
+    public bool IsPublic {get; set;}
   }
 }
