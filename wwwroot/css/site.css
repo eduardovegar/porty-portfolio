@@ -19,3 +19,13 @@ container {
 .portfolio-item > img {
   max-width: 300px;
 }
+.portfolio-container {
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #f8f8f8;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.bio-container {
+  background: #fff;
+}
