@@ -12,3 +12,7 @@
     <a class="btn btn-primary btn-lg" href="Portfolio/">My Portfolio</a>
   </p>
 </div>
+
+<div class="panel-footer add-item-form">
+@await Html.PartialAsync("AddItemPartial", new PortfolioItem())
+</div>

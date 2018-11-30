@@ -26,5 +26,16 @@ namespace porty.Controllers
       };
       return View(model);
      }
+     [ValidateAntiForgeryTokenAttribute]
+     public async Task<IActionResult> AddItem(PortfolioItem newItem)
+     {
+       return RedirectToAction("Index");
+     }
+     var successful = await _portfolioItemService.AddItemAsync(newItem);
+     if (!sucessful)
+     {
+       return BadRequest("Could not add Item");
+     }
+     return RedirectToAction("Index");
+
   }
-}
