@@ -5,19 +5,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using porty.Services;
 using porty.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace porty.Controllers
 {
+  [Authorize] // add user authorization
   public class PortfolioController : Controller
   {
     // creates an instance of IPortfolioItemService
     private readonly IPortfolioItemService _portfolioItemService;
 
-    public PortfolioController(IPortfolioItemService portfolioItemService)
+    // add manager
+    private readonly UserManager<ApplicationUser> _userManager;
+
+    public PortfolioController(IPortfolioItemService portfolioItemService, UserManager<ApplicationUser> userManager)
     {
       // whenever the porftolio controller is created (view rendered)
       // it assigns the service
       _portfolioItemService = portfolioItemService;
+
+      // asign user manager
+      _userManager = userManager;
     }
 
     // Index() creates the Portfolio View stuff
@@ -33,13 +42,16 @@ namespace porty.Controllers
       };
       return View(model);
     }
-    [ValidateAntiForgeryTokenAttribute]
+
+    [ValidateAntiForgeryTokenAttribute] // to prevent cross user validation
     public async Task<IActionResult> AddItem(PortfolioItem newItem)
     {
+      // if model doesn't load correctly go back to index
       if (!ModelState.IsValid)
       {
         return RedirectToAction("Index");
       }
+      // upload items through service
       var successful = await _portfolioItemService.AddItemAsync(newItem);
 
       if (!successful)
