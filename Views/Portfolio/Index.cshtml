@@ -4,10 +4,10 @@
   ViewData["Title"] = "See your portfolio items";
 }
 
-<div class="container-fluid">
+<div class="container-fluid portfolio-container">
   <div class="row">
     <!--TODO: Implement Bio from database -->
-    <div class="col-md-2 bio-container">
+    <div class="col-md-3 bio-container">
       <img class="img-responsive portfolio-bio-pic" />
       <h2 class="bio-title">Eduardo Vega</h2>
       <p class="bio-tagline">Freelance Designer / Web Developer</p>
@@ -22,12 +22,12 @@
     </div>
 
 
-  <div class="col-md-10">
-    <div class="row">
+  <div class="col-md-9">
+    <div class="row container-pitems">
     @foreach (var item in Model.Items)
     {
-      <div class="portfolio-item col-md-6">
-        <img class="img-responsive" src="@item.ImageUrl" />
+      <div class="portfolio-item col-md-4">
+        <img class="img-responsive center-block" src="@item.ImageUrl" />
         <h3 class="portfolio-title">@item.Title</h3>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@item.Id">
           More Info
@@ -40,7 +40,8 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">@item.Title</h4>
-                <div class="modal-body">
+                <div class="modal-body portfolio-item-modal">
+                  <img class="img-responsive center-block" src="@item.ImageUrl" />
                   <p class="portfolio-description">@item.Description</p>
                   </div>
                 <div class="modal-footer">
