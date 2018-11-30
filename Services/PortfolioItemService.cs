@@ -29,7 +29,7 @@ namespace porty.Services
       newItem.Id = Guid.NewGuid();
       newItem.PublishedAt = DateTimeOffset.Now;
 
-      // add items from context
+      // add items to context from the input form 
       _context.Items.Add(newItem);
 
       var saveResult = await _context.SaveChangesAsync();
