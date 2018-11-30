@@ -29,13 +29,16 @@ namespace porty.Controllers
      [ValidateAntiForgeryTokenAttribute]
      public async Task<IActionResult> AddItem(PortfolioItem newItem)
      {
+       if (!ModelState.IsValid)
+       {
+         return RedirectToAction("Index");
+       }
+       var successful = await _portfolioItemService.AddItemAsync(newItem);
+       if (!successful)
+       {
+         return BadRequest("Could not add Item");
+       }
        return RedirectToAction("Index");
      }
-     var successful = await _portfolioItemService.AddItemAsync(newItem);
-     if (!sucessful)
-     {
-       return BadRequest("Could not add Item");
-     }
-     return RedirectToAction("Index");
-
+   }
   }
