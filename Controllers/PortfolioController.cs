@@ -53,14 +53,18 @@ namespace porty.Controllers
       {
         return RedirectToAction("Index");
       }
+      // get the current user
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
       // upload items through service
-      var successful = await _portfolioItemService.AddItemAsync(newItem);
+      var successful = await _portfolioItemService.AddItemAsync(newItem, currentUser);
 
       if (!successful)
       {
         return BadRequest("Could not add Item");
       }
       return RedirectToAction("Index");
+      
     }
   }
 }
