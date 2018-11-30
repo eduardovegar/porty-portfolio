@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using porty.Data;
 using porty.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace porty.Services
 {
@@ -17,7 +18,8 @@ namespace porty.Services
     {
       _context = context;
     }
-    public async Task<PortfolioItem[]> GetIncompleteItemsAsync()
+    public async Task<PortfolioItem[]> GetIncompleteItemsAsync(
+      IdentityUser user)
     {
       return await _context.Items
         .ToArrayAsync();
@@ -29,7 +31,7 @@ namespace porty.Services
       newItem.Id = Guid.NewGuid();
       newItem.PublishedAt = DateTimeOffset.Now;
 
-      // add items to context from the input form 
+      // add items to context from the input form
       _context.Items.Add(newItem);
 
       var saveResult = await _context.SaveChangesAsync();

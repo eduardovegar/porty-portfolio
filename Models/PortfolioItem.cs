@@ -17,5 +17,7 @@ namespace porty.Models
     public DateTimeOffset? PublishedAt { get; set; }
     // show portfolio as public
     public bool IsPublic {get; set;}
+    // for the current user only
+    public string UserId {get; set;}
   }
 }

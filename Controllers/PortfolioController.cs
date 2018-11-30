@@ -13,13 +13,13 @@ namespace porty.Controllers
   [Authorize] // add user authorization
   public class PortfolioController : Controller
   {
-    // creates an instance of IPortfolioItemService
+        // creates an instance of IPortfolioItemService
     private readonly IPortfolioItemService _portfolioItemService;
 
     // add manager
-    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly UserManager<IdentityUser> _userManager;
 
-    public PortfolioController(IPortfolioItemService portfolioItemService, UserManager<ApplicationUser> userManager)
+    public PortfolioController(IPortfolioItemService portfolioItemService, UserManager<IdentityUser> userManager)
     {
       // whenever the porftolio controller is created (view rendered)
       // it assigns the service
@@ -32,8 +32,10 @@ namespace porty.Controllers
     // Index() creates the Portfolio View stuff
     public async Task<IActionResult> Index()
     {
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge(); //user must not be null
       // get items from service
-      var items = await _portfolioItemService.GetIncompleteItemsAsync();
+      var items = await _portfolioItemService.GetIncompleteItemsAsync(currentUser);
       // creates a model in which the Items come from the items from the
       // service
       var model = new PortfolioViewModel()
