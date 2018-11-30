@@ -44,7 +44,7 @@ namespace porty
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // add fake stuff implementation
-            services.AddScoped<IPortfolioItemService, PortfolioItemService()>;
+            services.AddScoped<IPortfolioItemService, PortfolioItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
