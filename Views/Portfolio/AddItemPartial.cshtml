@@ -1,0 +1,16 @@
+@model PortfolioItem
+<h3>Add a new portfolio item</h3>
+<form asp-action= "AddItem" method="POST">
+    <div class="form-group">
+      <label asp-for="Title">Name: </label>
+      <input type="text" asp-for="Title" />
+    </div>
+    <div class="form-group">
+      <label asp-for="Description">Description: </label>
+      <input type="textarea" asp-for="Description" />
+    </div>
+    <div class="form-group">
+      <label asp-for="ImageUrl"> Image: </label>
+      <input type="url" asp-for="ImageUrl" />
+    <button class="btn btn-primary" type="submit">Add</button>
+</form>
