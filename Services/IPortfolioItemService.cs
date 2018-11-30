@@ -8,5 +8,8 @@ namespace porty.Services
   public interface IPortfolioItemService
   {
     Task<PortfolioItem[]> GetIncompleteItemsAsync();
+
+    // add defninition for the addItem Service
+    Task<bool> AddItemAsync(PortfolioItem newItem);
   }
 }
