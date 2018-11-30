@@ -34,7 +34,7 @@ namespace porty.Controllers
          return RedirectToAction("Index");
        }
        var successful = await _portfolioItemService.AddItemAsync(newItem);
-       
+
        if (!successful)
        {
          return BadRequest("Could not add Item");
