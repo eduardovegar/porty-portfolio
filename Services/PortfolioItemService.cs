@@ -40,5 +40,17 @@ namespace porty.Services
       var saveResult = await _context.SaveChangesAsync();
       return saveResult == 1;
     }
+    public async Task<bool> EditItemAsync(PortfolioItem editedItem)
+    {
+      var item =await _context.Items
+      .Where(x => x.Id == id)
+      .SingleOrDefaultAsync();
+
+      if (item == null) return false;
+
+      // TODO: actually modify the shit
+      var saveResult = await _context.SaveChangesAsync();
+      return saveResult == 1;
+    }
   }
 }

@@ -64,7 +64,26 @@ namespace porty.Controllers
         return BadRequest("Could not add Item");
       }
       return RedirectToAction("Index");
-      
+
     }
+    // TODO add edit stuff
+    [ValidateAntiForgeryTokenAttribute]
+    public async Task<IActionResult> EditItem(Guid id)
+      {
+          if (!ModelState.IsValid)
+          {
+            return RedirectToAction("Index");
+          }
+          if(id == Guid.Empty)
+          {
+              return RedirectToAction("Index");
+          }
+          var successful = await _PortfolioItemService.EditItemAsync(id)
+          if (!successful)
+          {
+            return BadRequest ("Could not edit item.");
+          }
+          return RedirectToAction ("Index");
+      }
   }
 }
