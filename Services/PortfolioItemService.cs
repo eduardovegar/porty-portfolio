@@ -9,16 +9,17 @@ using Microsoft.EntityFrameworkCore;
 namespace porty.Services
 {
 
-  public class PortfolioItemServices : IPortfolioItemService
+  public class PortfolioItemService : IPortfolioItemService
   {
     private readonly ApplicationDbContext _context;
-    public PortfolioItemServices(ApplicationDbContext context)
+    public PortfolioItemService(ApplicationDbContext context)
     {
       _context = context;
     }
     public async Task<PortfolioItem[]> GetIncompleteItemsAsync()
     {
-      return await _context.Items;
+      return await _context.Items
+        .ToArrayAsync();
     }
   }
 }
