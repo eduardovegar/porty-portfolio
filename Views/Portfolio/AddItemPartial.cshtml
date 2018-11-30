@@ -1,6 +1,6 @@
 @model PortfolioItem
-<h3>Add a new portfolio item</h3>
 <form asp-action= "AddItem" method="POST">
+    <p class="help-block">Add a new item: </p>
     <div class="form-group">
       <label asp-for="Title">Name: </label>
       <input type="text" asp-for="Title" />
