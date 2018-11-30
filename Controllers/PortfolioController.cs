@@ -10,16 +10,23 @@ namespace porty.Controllers
 {
   public class PortfolioController : Controller
   {
+    // creates an instance of IPortfolioItemService
     private readonly IPortfolioItemService _portfolioItemService;
 
     public PortfolioController(IPortfolioItemService portfolioItemService)
     {
+      // whenever the porftolio controller is created (view rendered)
+      // it assigns the service
       _portfolioItemService = portfolioItemService;
     }
+
+    // Index() creates the Portfolio View stuff
     public async Task<IActionResult> Index()
     {
+      // get items from service
       var items = await _portfolioItemService.GetIncompleteItemsAsync();
-
+      // creates a model in which the Items come from the items from the
+      // service
       var model = new PortfolioViewModel()
       {
         Items = items // declare global Items as internal items
