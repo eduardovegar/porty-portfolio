@@ -7,7 +7,7 @@ namespace porty.Controllers
 {
     public class PublicPortfoliosController : Controller
     {
-  
+
     public IActionResult Index()
     {
 
