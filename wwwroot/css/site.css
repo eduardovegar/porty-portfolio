@@ -16,8 +16,6 @@ container {
 }
 
 /* portfolio route css*/
-img-responsive.ImageUrl {
-    display: inline-block;
-    max-width: 60%;
-    height: auto;
+.portfolio-item > img {
+  max-width: 300px;
 }
