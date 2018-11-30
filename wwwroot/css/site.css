@@ -13,11 +13,14 @@ container {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* portfolio route css*/
 .portfolio-item > img {
   max-width: 300px;
+  background-color: #fff;
 }
 .portfolio-container {
   margin-top: 40px;
