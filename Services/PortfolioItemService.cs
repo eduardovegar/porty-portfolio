@@ -40,5 +40,9 @@ namespace porty.Services
       var saveResult = await _context.SaveChangesAsync();
       return saveResult == 1;
     }
+
+    List<string> tagList = new List<string>(TagsArray.Length);
+    tagList.AddRange(TagsArray);
+    tagList.Reverse();
   }
 }
