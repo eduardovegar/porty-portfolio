@@ -19,5 +19,7 @@ namespace porty.Models
     public bool IsPublic {get; set;}
     // for the current user only
     public string UserId {get; set;}
+    //tags
+    public string[] Tags {get; set;}
   }
 }
