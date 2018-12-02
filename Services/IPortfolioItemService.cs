@@ -13,6 +13,6 @@ namespace porty.Services
     );
 
     // add defninition for the addItem Service
-    Task<bool> AddItemAsync(PortfolioItem newItem, IdentityUser user);
+    Task<bool> AddItemAsync(PortfolioItem newItem, ApplicationUser user);
   }
 }

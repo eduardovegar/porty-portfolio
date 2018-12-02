@@ -27,7 +27,7 @@ namespace porty.Services
         .ToArrayAsync();
     }
     // add service implementation of AddItemAsync
-    public async Task<bool> AddItemAsync(PortfolioItem newItem, IdentityUser user)
+    public async Task<bool> AddItemAsync(PortfolioItem newItem, ApplicationUser user)
     {
       // this sets on creation fields like id and date uploaded
       newItem.Id = Guid.NewGuid();
