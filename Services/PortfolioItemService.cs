@@ -33,7 +33,7 @@ namespace porty.Services
       newItem.Id = Guid.NewGuid();
       newItem.PublishedAt = DateTimeOffset.Now;
       newItem.UserId = user.Id;
-
+      newItem.Tags = newItem.TempTags.Split(',').ToList<string>();
       // add items to context from the input form
       _context.Items.Add(newItem);
 
@@ -41,8 +41,5 @@ namespace porty.Services
       return saveResult == 1;
     }
 
-    List<string> tagList = new List<string>(TagsArray.Length);
-    tagList.AddRange(TagsArray);
-    tagList.Reverse();
   }
 }

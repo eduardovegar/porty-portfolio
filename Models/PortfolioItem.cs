@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic; // for the list of strings
 
 namespace porty.Models
 {
@@ -19,7 +20,9 @@ namespace porty.Models
     public bool IsPublic {get; set;}
     // for the current user only
     public string UserId {get; set;}
-    //tags
-    public string[] Tags {get; set;}
+    // tags
+    public List<string> Tags {get; set;}
+    // to store strings before parsing into List 
+    public string TempTags {get; set;}
   }
 }
