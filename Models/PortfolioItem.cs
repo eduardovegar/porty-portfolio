@@ -20,9 +20,9 @@ namespace porty.Models
     public bool IsPublic {get; set;}
     // for the current user only
     public string UserId {get; set;}
-    // tags
-    public List<string> Tags {get; set;}
-    // to store strings before parsing into List 
-    public string TempTags {get; set;}
+    // string for tags, separation done later
+    // as ef migrations doesn't take primitive
+    // types like List<string>
+    public string Tags {get; set;}
   }
 }
