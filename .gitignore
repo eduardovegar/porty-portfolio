@@ -1,3 +1,11 @@
 [Oo]bj/[Dd]ebug
 [Dd]ebug/
 [Bb]in/
+
+# build results
+x64/
+x86/
+build/
+bld/
+[Rr]elease/
+[Rr]eleases
