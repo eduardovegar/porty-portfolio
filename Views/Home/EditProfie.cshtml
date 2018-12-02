@@ -1,0 +1,31 @@
+@model
+@{
+
+    ViewBag.Title = "Profile";
+    <h2> Profile </h2>
+
+  <p>
+    @Html.ActionLink("Edit Profile")
+    </p>
+    <table class="table">
+      <tr>
+        <th>
+          @Html.DisplayNameFor(PortfolioItem model=> model.Title)
+        </th>
+        <th>
+          @Html.DisplayNameFor(PortfolioItem model => model.Description)
+        </th>
+</tr>
+@foreach (var item in Models)
+<tr>
+  <td>
+    @Html.DisplayNameFor(PortfolioItem => item.Title)
+  </td>
+  <td>
+    @Html.DisplayNameFor(PortfolioItem => item.Description)
+  </td>
+    @Html.ActionLink("Edit","Edit", new {id=item.Title})
+  </td>
+</tr>
+}
+</table>
