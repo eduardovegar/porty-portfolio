@@ -76,7 +76,7 @@ namespace porty.Controllers
 
       var items = await _portfolioItemService.GetPortfolioItemAsync(id);
 
-      return RedirectToAction("Index");
+      return View(items);
     }
   }
 }
