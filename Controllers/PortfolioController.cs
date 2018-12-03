@@ -17,7 +17,7 @@ namespace porty.Controllers
     private readonly IPortfolioItemService _portfolioItemService;
 
     // add manager
-    private readonly UserManager<IdentityUser> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager;
 
     public PortfolioController(IPortfolioItemService portfolioItemService, UserManager<IdentityUser> userManager)
     {
@@ -64,7 +64,7 @@ namespace porty.Controllers
         return BadRequest("Could not add Item");
       }
       return RedirectToAction("Index");
-      
+
     }
   }
 }
