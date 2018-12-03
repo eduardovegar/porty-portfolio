@@ -66,7 +66,7 @@ namespace porty.Controllers
       return RedirectToAction("Index");
 
     }
-    // edit route
+    // edit route with get method Portfolio/EditItem/ID
     public async Task<IActionResult> EditItem(Guid id)
     {
       var currentUser = await _userManager.GetUserAsync(User);
@@ -77,6 +77,29 @@ namespace porty.Controllers
       var items = await _portfolioItemService.GetPortfolioItemAsync(id);
 
       return View(items);
+    }
+    // post route for editItem
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> EditItem(PortfolioItem item)
+    {
+      // if model doesn't load correctly go back to index
+      if (!ModelState.IsValid)
+      {
+        return RedirectToAction("Index");
+      }
+      // get the current user
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
+      // upload items through service
+      var successful = await _portfolioItemService.UpdateItemAsync(item, currentUser);
+
+      if (!successful)
+      {
+        return BadRequest("Could not update Item");
+      }
+      return RedirectToAction("Index");
+
     }
   }
 }
