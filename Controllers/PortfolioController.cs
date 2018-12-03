@@ -64,7 +64,16 @@ namespace porty.Controllers
         return BadRequest("Could not add Item");
       }
       return RedirectToAction("Index");
-      
+
+    }
+    // edit route
+    public async Task<IActionResult> EditItem(Guid id)
+    {
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
+      var items = await _portfolioItemService.GetIncompleteItemsAsync(currentUser);
+
+      return RedirectToAction("Index");
     }
   }
 }

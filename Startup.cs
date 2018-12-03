@@ -71,7 +71,12 @@ namespace porty
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "Edit",
+                    template: "{controller=Portfolio}/{action=EditItem}/{id?}"
+                );
             });
         }
     }
