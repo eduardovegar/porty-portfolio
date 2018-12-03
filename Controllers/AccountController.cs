@@ -51,7 +51,7 @@ namespace porty.Controllers
         ViewData["ReturnUrl"] = returnUrl;
         return View();
     }
-    
+
     // register stuff that matters for new fields
     [HttpGet]
     [AllowAnonymous]
@@ -94,7 +94,6 @@ namespace porty.Controllers
         return View();
     }
 
-    #region Helpers
 
     private void AddErrors(IdentityResult result)
     {
