@@ -6,6 +6,8 @@
 <div class="container-fluid">
   <form asp-action="EditItem" method="POST">
   <p class="help-block">Editing metadata</p>
+  <input type="hidden" name="Id" asp-for="Id" />
+  <input type="hidden" name="PublishedAt" asp-for="PublishedAt />"
   <div class="form-group">
     <label asp-for="Title">Name: </label>
     <input class="form-control" type="text" asp-for="Title" />
