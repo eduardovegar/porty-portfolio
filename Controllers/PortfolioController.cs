@@ -81,7 +81,7 @@ namespace porty.Controllers
     // post route for editItem
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> EditItem(PortfolioItem item)
+    public async Task<IActionResult> EditItem([Bind("Id, Title, Description, ImageUrl, Tags, PublishedAt")]PortfolioItem item)
     {
       // if model doesn't load correctly go back to index
       if (!ModelState.IsValid)

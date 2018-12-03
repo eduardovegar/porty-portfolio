@@ -46,8 +46,9 @@ namespace porty.Services
 
     public async Task<bool> UpdateItemAsync(PortfolioItem updatedItem, IdentityUser user)
     {
-      var oldItem = _context.Items.SingleOrDefault(x => x.Id == updatedItem.Id);
-      
+      var oldItem =  await _context.Items.SingleOrDefaultAsync(x => x.Id == updatedItem.Id);
+
+
       var saveResult = await _context.SaveChangesAsync();
       return saveResult == 1;
     }
