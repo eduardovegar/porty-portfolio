@@ -26,6 +26,10 @@ namespace porty.Services
         .Where(x => x.UserId == user.Id)
         .ToArrayAsync();
     }
+    public async Task<PortfolioItem> GetPortfolioItemAsync(Guid id)
+    {
+      return await _context.Items.FindAsync(id);
+    }
     // add service implementation of AddItemAsync
     public async Task<bool> AddItemAsync(PortfolioItem newItem, IdentityUser user)
     {

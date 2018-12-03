@@ -14,5 +14,8 @@ namespace porty.Services
 
     // add defninition for the addItem Service
     Task<bool> AddItemAsync(PortfolioItem newItem, IdentityUser user);
+
+    // add editservice defninition
+    Task<PortfolioItem> GetPortfolioItemAsync(Guid id);
   }
 }

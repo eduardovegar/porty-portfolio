@@ -3,3 +3,25 @@
 @{
   ViewData["Title"] = "Edit";
 }
+<div class="container-fluid">
+  <form asp-action="EditItem" method="POST">
+  <p class="help-block">Editing: </p>
+  <div class="form-group">
+    <label asp-for="Title">Name: </label>
+    <input type="text" asp-for="Title" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Description">Description: </label>
+    <textarea asp-for="Description"> </textarea>
+  </div>
+  <div class="form-group">
+    <label asp-for="ImageUrl">Image: </label>
+    <input type="url" asp-for="ImageUrl" />
+  </div>
+  <div class = "form-group">
+    <label asp-for= "Tags">Tags: </label>
+    <input type="text" asp-for="Tags"/>
+  </div>
+  <button class="btn btn-primary" type="submit">Update</button>
+  </form>
+</div>

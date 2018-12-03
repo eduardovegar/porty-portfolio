@@ -71,7 +71,10 @@ namespace porty.Controllers
     {
       var currentUser = await _userManager.GetUserAsync(User);
       if (currentUser == null) return Challenge();
-      var items = await _portfolioItemService.GetIncompleteItemsAsync(currentUser);
+
+      if (id == null ){return NotFound();}
+
+      var items = await _portfolioItemService.GetPortfolioItemAsync(id);
 
       return RedirectToAction("Index");
     }
