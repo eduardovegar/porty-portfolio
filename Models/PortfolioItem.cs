@@ -22,7 +22,8 @@ namespace porty.Models
     public string UserId {get; set;}
     // tags
     public List<string> Tags {get; set;}
-    // to store strings before parsing into List 
+    // to store strings before parsing into List
     public string TempTags {get; set;}
   }
+
 }

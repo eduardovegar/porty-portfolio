@@ -64,7 +64,22 @@ namespace porty.Controllers
         return BadRequest("Could not add Item");
       }
       return RedirectToAction("Index");
-      
+
+    }
+
+    public Task<ActionResult> Edit (int Id)
+    {
+      private readonly  _portfolioItemService = portfolioItemService;
+      //Get the information from the array
+      var edt = PortfolioItemService.Where(e => e.Title == Title).FirstOrDefault();
+
+      return View(edt);
+    }
+
+    public ActionResult Edit(edt)
+    {
+      //code to update edited fields
+      return RedirectToAction ("Index")
     }
   }
 }

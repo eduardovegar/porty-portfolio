@@ -1,7 +1,7 @@
 @model
 @{
 
-    ViewBag.Title = "Profile";
+    ViewBag.Title = "Edit Profile";
     <h2> Profile </h2>
 
   <p>
@@ -10,10 +10,10 @@
     <table class="table">
       <tr>
         <th>
-          @Html.DisplayNameFor(PortfolioItem model=> model.Title)
+          @Html.DisplayNameFor(PortfolioItemService => model.Title)
         </th>
         <th>
-          @Html.DisplayNameFor(PortfolioItem model => model.Description)
+          @Html.DisplayNameFor(PortfolioItemService => model.Description)
         </th>
 </tr>
 @foreach (var item in Models)
