@@ -29,15 +29,16 @@
 
   <div class="col-md-9">
     <div class="row container-pitems">
+    @{int i = 0;}
     @foreach (var item in Model.Items)
     {
       <div class="portfolio-item col-md-4">
       <!-- delete item modal -->
-      <button type="button" class="pull-right" data-toggle="modal" data-target="#@item.Title">
+      <button type="button" class="pull-right" data-toggle="modal" data-target="#@i">
         <span aria-hidden="true">&times;</span>
       </button>
       <!--modal per delete item-->
-      <div class="modal fade" id="@item.Title" tabindex="-1" role="dialog">
+      <div class="modal fade" id="@i" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -79,7 +80,7 @@
           </div><!--modal dialog ends-->
         </div><!--modal fade ends-->
       </div><!--portfolio item ends-->
-
+      i++;
     }
       </div><!-- row pitems ends-->
     </div>
