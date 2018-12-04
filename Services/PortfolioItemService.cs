@@ -55,7 +55,7 @@ namespace porty.Services
     }
 
     //delete method
-    public async Task<bool> DeleteItem (Guid id)
+    public async Task<bool> DeleteItemAsync(Guid id)
     {
         var item = await _context.Items
         .Where(x => x.Id == id)

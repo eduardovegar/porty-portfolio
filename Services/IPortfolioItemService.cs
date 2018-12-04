@@ -20,6 +20,6 @@ namespace porty.Services
     // add editservice defninition
     Task<PortfolioItem> GetPortfolioItemAsync(Guid id);
 
-
+    Task<bool> DeleteItemAsync(Guid id);
   }
 }
