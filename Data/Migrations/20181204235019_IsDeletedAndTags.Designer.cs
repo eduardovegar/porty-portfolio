@@ -9,8 +9,8 @@ using porty.Data;
 namespace porty.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181130025953_AddItemUserId")]
-    partial class AddItemUserId
+    [Migration("20181204235019_IsDeletedAndTags")]
+    partial class IsDeletedAndTags
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -188,9 +188,11 @@ namespace porty.Data.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<bool>("IsPublic");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<DateTimeOffset?>("PublishedAt");
+
+                    b.Property<string>("Tags");
 
                     b.Property<string>("Title");
 

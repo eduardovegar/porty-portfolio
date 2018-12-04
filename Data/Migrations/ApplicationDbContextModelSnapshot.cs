@@ -186,7 +186,7 @@ namespace porty.Data.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<bool>("IsPublic");
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<DateTimeOffset?>("PublishedAt");
 
