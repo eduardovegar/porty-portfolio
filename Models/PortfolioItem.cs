@@ -22,5 +22,7 @@ namespace porty.Models
     // as ef migrations doesn't take primitive
     // types like List<string>
     public string Tags {get; set;}
+    //delete feature
+    public bool IsDeleted {get; set;}
   }
 }
