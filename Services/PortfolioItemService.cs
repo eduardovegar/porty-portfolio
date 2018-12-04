@@ -24,6 +24,7 @@ namespace porty.Services
       // return items from current user only
       return await _context.Items
         .Where(x => x.UserId == user.Id)
+        .Where(y => y.IsDeleted == false)
         .ToArrayAsync();
     }
     public async Task<PortfolioItem> GetPortfolioItemAsync(Guid id)
