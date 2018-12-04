@@ -99,7 +99,24 @@ namespace porty.Controllers
         return BadRequest("Could not update Item");
       }
       return RedirectToAction("Index");
-      
+
+    }
+    // delete action
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteItem(Guid id)
+    {
+      if (id == Guid.Empty)
+      {
+          return RedirectToAction("Index");
+      }
+      var successful = await _portfolioItemService.DeleteItemAsync(id);
+      if (!successful)
+      {
+          return BadRequest("Could not delete item.");
+      }
+      return RedirectToAction("Index");
     }
   }
 }
