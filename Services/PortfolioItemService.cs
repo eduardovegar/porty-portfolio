@@ -35,6 +35,7 @@ namespace porty.Services
     {
       // this sets on creation fields like id and date uploaded
       newItem.Id = Guid.NewGuid();
+      newItem.IsDeleted = false;
       newItem.PublishedAt = DateTimeOffset.Now;
       newItem.UserId = user.Id;
       // add items to context from the input form
