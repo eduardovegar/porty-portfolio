@@ -54,5 +54,19 @@ namespace porty.Services
       return saveResult == 1;
     }
 
-  }
+    //delete method
+    public async Task<bool> DeleteItem (Guid id)
+    {
+        var item = await _context.Items
+        .Where(x => x.Id == id)
+        .SingleOrDefaultAsync();
+
+      if (item == null){ return false;}
+
+      item.IsDeleted = true;
+      var saveResult = await _context.SaveChangesAsync();
+      return saveResult == 1;
+    }
+    }
+
 }
