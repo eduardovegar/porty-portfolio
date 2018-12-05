@@ -102,6 +102,7 @@ namespace porty.Controllers
 
     }
     // delete action
+    [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteItem(Guid id)
     {
