@@ -11,12 +11,9 @@
     <div class="col-md-3 bio-container">
 
     <div>
-      @foreach (var user in Model.Apu)
-      {
-      <h2 class="bio-title">@user.Name</h2>
-      <p class="bio-tagline">@user.Tagline</p>
-      <p class="bio-location">@user.Location</p>
-      }
+      <h2 class="bio-title">@Model.Apu.Name</h2>
+      <p class="bio-tagline">@Model.Apu.Tagline</p>
+      <p class="bio-location">@Model.Apu.Location</p>
     </div>
 
 
