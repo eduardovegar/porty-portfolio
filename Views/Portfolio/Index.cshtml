@@ -47,7 +47,7 @@
               <h4 class="modal-title">Are you sure you want to delete @item.Title ?</h4>
             </div><!--modal header ends-->
             <div class="modal-footer">
-              <a class="btn btn-primary" asp-action="DeleteItem" >Yes, Delete</a>
+              <a class="btn btn-primary" asp-action="DeleteItem" asp-route-id="@item.Id" >Yes, Delete</a>
               <button type="button" class="btn btn-default" data-dismiss="modal">No, Cancel</button>
             </div><!--modal footer ends-->
           </div><!--modal-content ends-->
