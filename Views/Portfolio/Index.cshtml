@@ -1,3 +1,5 @@
+@using porty.Areas.Identity.Pages.Account.Manage
+
 @model PortfolioViewModel
 
 @{
@@ -9,7 +11,7 @@
     <!--TODO: Implement Bio from database -->
     <div class="col-md-3 bio-container">
     <div class="add-item-form">
-    @await Html.PartialAsync("BioPartial")
+    @await Html.PartialAsync("BioPartial", IndexModel)
     </div>
 
       <div class="add-item-form">
