@@ -19,7 +19,7 @@ namespace porty.Services
       _context = context;
     }
     public async Task<PortfolioItem[]> GetIncompleteItemsAsync(
-      IdentityUser user)
+      ApplicationUser user)
     {
       // return items from current user only
       return await _context.Items
@@ -32,7 +32,7 @@ namespace porty.Services
       return await _context.Items.FindAsync(id);
     }
     // add service implementation of AddItemAsync
-    public async Task<bool> AddItemAsync(PortfolioItem newItem, IdentityUser user)
+    public async Task<bool> AddItemAsync(PortfolioItem newItem, ApplicationUser user)
     {
       // this sets on creation fields like id and date uploaded
       newItem.Id = Guid.NewGuid();
@@ -46,7 +46,7 @@ namespace porty.Services
       return saveResult == 1;
     }
 
-    public async Task<bool> UpdateItemAsync(PortfolioItem updatedItem, IdentityUser user)
+    public async Task<bool> UpdateItemAsync(PortfolioItem updatedItem, ApplicationUser user)
     {
       updatedItem.UserId = user.Id;
       _context.Update(updatedItem);
