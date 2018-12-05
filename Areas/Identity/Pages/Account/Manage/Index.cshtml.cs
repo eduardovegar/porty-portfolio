@@ -40,6 +40,16 @@ namespace porty.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            [DataType(DataType.Text)]
+            [Display(Name = "Full name")]
+            public string Name {get;set;}
+            [DataType(DataType.Text)]
+            [Display(Name = "Tagline")]
+            public string Tagline {get;set;}
+            [DataType(DataType.Text)]
+            [Display(Name = "Location")]
+            public string Location {get;set;}
+
             [Required]
             [EmailAddress]
             public string Email { get; set; }
@@ -65,6 +75,9 @@ namespace porty.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {
+                Name = user.Name,
+                Tagline = user.Tagline,
+                Location = user.Location,
                 Email = email,
                 PhoneNumber = phoneNumber
             };
@@ -87,6 +100,19 @@ namespace porty.Areas.Identity.Pages.Account.Manage
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
+            // if its different change it
+            if (Input.Name != user.Name)
+            {
+              user.Name = Input.Name;
+            }
+            if (Input.Tagline != user.Tagline)
+            {
+              user.Tagline = Input.Tagline;
+            }
+            if (Input.Location != user.Location)
+            {
+              user.Location = Input.Location;
+            }
             var email = await _userManager.GetEmailAsync(user);
             if (Input.Email != email)
             {
@@ -108,7 +134,8 @@ namespace porty.Areas.Identity.Pages.Account.Manage
                     throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
                 }
             }
-
+            // idk but the website said to do it
+            await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
