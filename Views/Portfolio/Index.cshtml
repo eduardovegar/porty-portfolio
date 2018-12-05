@@ -9,9 +9,15 @@
   <div class="row">
     <!--TODO: Implement Bio from database -->
     <div class="col-md-3 bio-container">
-    <h2 asp-for="Model.Apu.Name" class="bio-title"></h2>
-    <p asp-for="Model.Apu.Tagline" class="bio-tagline"></p>
-    <p asp-for="Model.Apu.Location" class="bio-location"></p>
+
+    <div>
+      @foreach (var user in Model.Apu)
+      {
+      <h2 class="bio-title">@user.Name</h2>
+      <p class="bio-tagline">@user.Tagline</p>
+      <p class="bio-location">@user.Location</p>
+      }
+    </div>
 
 
       <div class="add-item-form">
