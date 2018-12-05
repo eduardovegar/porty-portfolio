@@ -7,6 +7,8 @@ using porty.Services;
 using porty.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using porty.Data;
+
 
 namespace porty.Controllers
 {
@@ -17,9 +19,9 @@ namespace porty.Controllers
     private readonly IPortfolioItemService _portfolioItemService;
 
     // add manager
-    private readonly UserManager<IdentityUser> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public PortfolioController(IPortfolioItemService portfolioItemService, UserManager<IdentityUser> userManager)
+    public PortfolioController(IPortfolioItemService portfolioItemService, UserManager<ApplicationUser> userManager)
     {
       // whenever the porftolio controller is created (view rendered)
       // it assigns the service
