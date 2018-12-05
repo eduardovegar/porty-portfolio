@@ -42,7 +42,8 @@ namespace porty.Controllers
       // service
       var model = new PortfolioViewModel()
       {
-        Items = items // declare global Items as internal items
+        Items = items, // declare global Items as internal items
+        Apu = currentUser
       };
       return View(model);
     }
